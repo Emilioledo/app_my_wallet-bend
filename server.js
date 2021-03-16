@@ -1,8 +1,14 @@
 const express = require ('express');
-const connectdb = require ('./config/database/database');
+const connectdb = require ('./config/database');
 const app = express ();
+const walletRoutes = require ('./src/router/walletRoutes');
 
+/*JSON*/
+const bodyParser = require ('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }))
 
+/*Rutas*/
+app.use(walletRoutes);
 
 /*PORT*/
 const port = process.env.PORT || 5000;
