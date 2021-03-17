@@ -5,7 +5,7 @@ const walletRoutes = require ('./src/router/walletRoutes');
 
 /*JSON*/
 const bodyParser = require ('body-parser');
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser());
 
 /*Rutas*/
 app.use(walletRoutes);
