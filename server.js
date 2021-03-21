@@ -5,13 +5,13 @@ const walletRoutes = require ('./src/router/walletRoutes');
 
 /*JSON*/
 const bodyParser = require ('body-parser');
-app.use(bodyParser());
+app.use(express.json());
 
 /*Rutas*/
 app.use(walletRoutes);
 
 /*PORT*/
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 
 /*Conectando base de datos*/

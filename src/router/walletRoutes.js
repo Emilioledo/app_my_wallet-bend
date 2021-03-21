@@ -13,7 +13,7 @@ router.get ('/', async (req, res)=>{
     }
 });
 
-router.post ('/', async (req, res)=>{
+router.post ('/alta', async (req, res)=>{
     let nombre_= req.body.nombre; 
     let saldo_= req.body.saldo; 
     let descripcion_ = req.body.descripcion; 
